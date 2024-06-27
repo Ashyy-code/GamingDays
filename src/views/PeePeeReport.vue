@@ -9,6 +9,9 @@
         <thead>
             <tr>
                 <th>
+                    Rank
+                </th>
+                <th>
                     Gamer
                 </th>
                 <th>
@@ -26,7 +29,10 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="gamer in peepeeReportData" :key="gamer">
+            <tr v-for="(gamer,index) in peepeeReportData" :key="gamer" class="player" @click="selectedGamer = null; selectedGamer = gamer" :selected="selectedGamer == gamer" >
+               <td>
+                    {{ index +1 }}
+               </td>
                 <td>
                     {{ gamer.gamerName }}
                 </td>
@@ -47,6 +53,58 @@
     </table>
     
   </article>
+  <article v-if="selectedGamer" class="animate__animated animate__fadeIn gmr">
+    <div>
+        <h2>{{ selectedGamer.gamerName }}</h2>
+        <hr>
+        <h4>Gaming Days</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Day
+                    </th>
+                    <th>
+                        Total Hours
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="day in selectedGamer.gamingDays" :key="day">
+                    <td>
+                        {{ day.dayName }}
+                    </td>
+                    <td>
+                        {{ Math.floor(day.minsSpent / 60) }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Common Channels</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Channel
+                    </th>
+                    <th>
+                        Total Hours
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="day in selectedGamer.gamingChannels" :key="day">
+                    <td>
+                        {{ day.channelName }}
+                    </td>
+                    <td>
+                        {{ Math.ceil(day.minsSpent / 60) }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </article>
 </template>
 
 <script>
@@ -61,6 +119,7 @@ data(){
     return{
         peepeeReportData:null,
         peepeeDataLoaded:false,
+        selectedGamer:null,
     }
 },
 methods:{
@@ -76,6 +135,17 @@ methods:{
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.player{
+    cursor: pointer;
+    &:hover{
+        outline:solid 3px #3578db;
+    }
+}
+tr[selected="true"]{
+    outline:solid 3px #3578db;
+}
+.gmr{
+    outline:solid 3px #3578db;
+}
 </style>
