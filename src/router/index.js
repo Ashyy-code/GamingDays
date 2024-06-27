@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Landing from '../views/Landing.vue';
 import DayReport from '../views/DayReport.vue';
 import GamersReport from '../views/PeePeeReport.vue';
+import KeyPhrases from '../views/KeyPhrases.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -14,14 +15,19 @@ const router = createRouter({
       component: Landing
     },
     {
-      path: '/dayReport',
+      path: '/dayreport',
       name: 'day',
       component: DayReport
     },
     {
-      path:'/bigGamers',
-      name:'bigGamers',
+      path:'/biggamers',
+      name:'biggamers',
       component: GamersReport
+    },
+    {
+      path:'/keyphrases',
+      name:'keyphrases',
+      component: KeyPhrases
     }
   ]
 })
