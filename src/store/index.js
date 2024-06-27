@@ -1,0 +1,14 @@
+import { createStore } from "vuex";
+export default createStore({
+    state(){
+        return{
+            //Endpoints
+            day_report_endpoint_url:'https://ashypls-001-site1.ftempurl.com/apps/gamingdays/report/?report=day',
+            peepee_report_endpoint_url:'https://ashypls-001-site1.ftempurl.com/apps/gamingdays/report/?report=peepees',
+            navigation_endpoint_url:'https://ashypls-001-site1.ftempurl.com/apps/gamingdays/report/navItems.aspx',
+
+            //nav
+            currentView:'/'
+        }
+    }
+})
