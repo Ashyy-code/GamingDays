@@ -62,7 +62,7 @@
                 <td>{{ day.day }}</td>
                 <td>{{ day.uniqueGamers.length }}</td>
                 <td>{{ day.uniqueGamers.sort((a,b) => b.totalMins - a.totalMins)[0].gamerName }} ({{ Math.floor(day.uniqueGamers.sort((a,b) => b.totalMins - a.totalMins)[0].totalMins /60) + ' hours' }})</td>
-                <td>{{ day.totalMins }}</td>
+                <td>{{ Math.ceil(day.totalMins/60) }}</td>
             </tr>
         </tbody>
       </table>
