@@ -10,6 +10,7 @@
     <p>Also only in servers where the GamingDays bot is.</p>
     <h2>Keyphrases..</h2>
     <p>When you say something that has a specific keyphrase in it, a counter against that keyphrase is incremented. The message isnt stored, the person who said it isnt stored. It just goes "oh i know that word.. bop!" and incerements the number of times that phrase was said.</p>
+    <p>What does this data look like? well it looks like this: Phrase: M+ , Count: 7, Day: Monday. And thats it. Nothing about who said it, or what time it was said.</p>
     <p>This data will eventually be paired with the Best Day data, to help realise which days people are more likely to ASK for VC as well as join it.</p>
     <h2>No thanks</h2>
     <p>Worry not, I am currently implementing an opt out and purge protocol for sensitive andy's. Soon you will be able to request to have your data purged by a simple whisper command to the bot, as well as opt out of being tracked. (Sorry but in order to know to ignore you actions, I will still kinda have to store your Discord Username so it knows to ignore you otherwise like.. how is it gonna know :shrug:)</p>
