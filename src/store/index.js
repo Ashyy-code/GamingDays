@@ -5,6 +5,7 @@ export default createStore({
             //Endpoints
             day_report_endpoint_url:'https://ashypls-001-site1.ftempurl.com/apps/gamingdays/report/?report=day',
             peepee_report_endpoint_url:'https://ashypls-001-site1.ftempurl.com/apps/gamingdays/report/?report=peepees',
+            timeslots_report_endpoint_url:'https://ashypls-001-site1.ftempurl.com/apps/gamingdays/report/?report=timeslots',
             keyphrase_report_endpoint_url:'https://ashypls-001-site1.ftempurl.com/apps/gamingdays/report/?report=phrases',
             keyphrase_report_breakdown_endpoint_url:'https://ashypls-001-site1.ftempurl.com/apps/gamingdays/report/?report=keyphrases',
             keyphrase_insert_url:'https://ashypls-001-site1.ftempurl.com/apps/gamingdays/report/default.aspx/insertPhrase',

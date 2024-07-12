@@ -5,6 +5,7 @@ import Landing from '../views/Landing.vue';
 import DayReport from '../views/DayReport.vue';
 import GamersReport from '../views/PeePeeReport.vue';
 import KeyPhrases from '../views/KeyPhrases.vue';
+import TimeSlots from '../views/TimeSlots.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -28,6 +29,11 @@ const router = createRouter({
       path:'/keyphrases',
       name:'keyphrases',
       component: KeyPhrases
+    },
+    {
+      path:"/timeslots",
+      name:'timeslots',
+      component: TimeSlots
     }
   ]
 })

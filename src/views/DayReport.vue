@@ -116,37 +116,6 @@ th {
   text-align: center;
 }
 
-.chart {
-  display: flex;
-  justify-content: space-evenly;
-  height: 400px;
-  align-items: flex-end;
-  width: 500px;
-  margin-bottom: 1rem;
-  background: #111216;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  gap:5px;
-
-  .bar {
-    background: #85b14d;
-    width: 14%;
-    height: 0;
-    transition: all 400ms ease;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    color: white;
-    font-size: 16px;
-
-    position: relative;
-
-    span {
-      position: absolute;
-      bottom: -2.5rem;
-    }
-  }
-}
 .group{
     display: flex;
     gap:2rem;

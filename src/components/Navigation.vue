@@ -44,7 +44,7 @@ export default {
       await axios.get(store.state.navigation_endpoint_url).then((response) => {
         this.navItems = response.data;
         this.navLoaded = true;
-        console.log(this.navItems);
+        //console.log(this.navItems);
       });
     },
     //method for checking selection
